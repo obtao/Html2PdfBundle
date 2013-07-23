@@ -1,5 +1,5 @@
 {
-    "name": "Obtao/html2pdf-bundle",
+    "name": "obtao/html2pdf-bundle",
     "description": "This Bundle allows you to generate pdf files into a Symfony2 project.",
     "keywords": ["generator", "pdf", "file"],
     "type": "symfony-bundle",
@@ -12,7 +12,7 @@
         },
         {
             "name":     "Symfony Community",
-            "homepage": "https://github.com/Obtao/Html2PdfBundle/contributors"
+            "homepage": "https://github.com/obtao/Html2PdfBundle/contributors"
         }        
     ],
     "require": {
