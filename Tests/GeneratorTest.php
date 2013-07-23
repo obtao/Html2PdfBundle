@@ -1,8 +1,8 @@
 <?php
 
-namespace Camp\Bundle\Html2PdfBundle\Tests;
+namespace Obtao\Bundle\Html2PdfBundle\Tests;
 
-use Camp\Bundle\Html2PdfBundle\DependencyInjection\PdfGenerator;
+use Obtao\Bundle\Html2PdfBundle\DependencyInjection\PdfGenerator;
 
 class GeneratorTest extends \PHPUnit_Framework_TestCase
 {
