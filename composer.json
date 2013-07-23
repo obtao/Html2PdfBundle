@@ -18,16 +18,12 @@
     "require": {
         "php":             ">=5.3.0",
         "symfony/symfony": ">=2.1"
-    },
+    },    
     "autoload": {
         "psr-0": {
             "Obtao\\Bundle\\Html2PdfBundle": ""
         }
     },
-    "target-dir" : "Obtao/Bundle/Html2PdfBundle",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "master"
-        }
-    }
+    "minimum-stability": "dev",
+    "target-dir" : "Obtao/Bundle/Html2PdfBundle"
 }
