@@ -28,6 +28,13 @@ Add to your `composer.json`:
 
 ## Usage
 
+Note that you maybe need to put the bundle in your src/ folder (src/Obtao/Bundle/Html2PdfBundle)
+and then register it normally in you app/AppKernel.php :
+```php
+  // ...
+  new Obtao\Bundle\Html2PdfBundle\ObtaoHtml2PdfBundle(),
+```
+
 ```php
 <?php
 
@@ -55,6 +62,47 @@ public function generatePdfAction(){
 	return $response;
 }
 ```
+
+The HTML2PDF library needs some rules to be respected :
+
+1) No <header> tag
+2) The <html> tag should be replaced by <page> (the bundle handles it)
+3) Style needs to be defined directly in the page (and every css rules are not supported...)
+4) The assets path need to be adapted (see below)
+
+Here is an example :
+
+```html
+<page>
+	<style type="text/css">
+		#hello{
+			color: #002549;
+			font-family: Helvetica, sans-serif;
+			text-align:center;
+			font-size: 40px;
+		}
+	</style>
+
+	<div id="hello">
+
+		<div style="position:absolute;top:0;left:0;z-index:1;opacity:0.6;">
+			Hello you!
+			<img style="opacity:0.6;" src="{{ web_path~asset('/bundles/obtaosomebundle/images/greet.png') }}" alt="background" />
+		</div>
+
+	</div>
+</page>
+```
+
+Note: the web_path variable is defined in the app/config/config.yml file :
+
+```json
+twig:
+    globals:
+        web_path: %kernel.root_dir%/../web
+```
+
+
 
 ## Credits
 
