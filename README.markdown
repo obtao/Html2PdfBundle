@@ -47,7 +47,7 @@ public function generatePdfAction(){
 			protected $size = 'A4'
 	   Here is an example to generate a pdf with a special font and a landscape orientation
 	*/
-	$pdfData = $this->get('obtao.pdf.generator')->outputPdf($content,array('font'=>'Georgia',format'=>'L'));
+	$pdfData = $this->get('obtao.pdf.generator')->outputPdf($content,array('font'=>'Georgia','format'=>'L'));
 
 	$response = new Response($pdfData);
 	$response->headers->set('Content-Type', 'application/pdf');
