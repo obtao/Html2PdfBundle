@@ -65,10 +65,10 @@ public function generatePdfAction(){
 
 The HTML2PDF library needs some rules to be respected :
 
-1) No <header> tag
-2) The <html> tag should be replaced by <page> (the bundle handles it)
-3) Style needs to be defined directly in the page (and every css rules are not supported...)
-4) The assets path need to be adapted (see below)
+- No <header> tag
+- The <html> tag should be replaced by <page> (the bundle handles it)
+- Style needs to be defined directly in the page (and every css rules are not supported...)
+- The assets path need to be adapted (see below)
 
 Here is an example :
 
@@ -96,7 +96,7 @@ Here is an example :
 
 Note: the web_path variable is defined in the app/config/config.yml file :
 
-```json
+```yaml
 twig:
     globals:
         web_path: %kernel.root_dir%/../web
