@@ -28,8 +28,7 @@ Add to your `composer.json`:
 
 ## Usage
 
-Note that you maybe need to put the bundle in your src/ folder (src/Obtao/Bundle/Html2PdfBundle)
-and then register it normally in you app/AppKernel.php :
+Then register it normally in you app/AppKernel.php :
 ```php
   // ...
   new Obtao\Bundle\Html2PdfBundle\ObtaoHtml2PdfBundle(),
